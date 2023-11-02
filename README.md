@@ -21,4 +21,9 @@ Run update step with GNSS position and velocity:
 ```
 mykalman.GNSS_update(position, velocity);
 ```
+Access the predictions:
+```
+position = mykalman.U_hat[0]
+velocity = mykalman.U_hat[1]
+```
 
