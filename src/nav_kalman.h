@@ -28,11 +28,16 @@ SOFTWARE.
 struct navKalman
 {
 	navKalman(double P_pos, double P_vel, double a_std);
-	
+
+	//The estimated error covariances
 	double P[2][2];
+	//The accelerometer covariance matrix (hyperparameter)
 	double Q[2][2];
+	//The Kalman gains
 	double K[2][2];
+	//The predicted values
 	double U_hat[2];
+	//The GNSS covariance matrix (hyperparameter)
 	double R[2][2];
 	
 	void GNSS_update(double coord, double vel);
