@@ -1,13 +1,10 @@
 # Navigation-Kalman
-An implementation of an asynchronous navigation Kalman filter, fusing GNSS data with accelerations to predict position and velocity, on a single axis.
-The filter is used to predict higher frequency data off of raw GNSS readings using an IMU, for real-time control systems.
-U_hat holds the predicted values of the filter (position, velocity).
+An implementation of an asynchronous navigation Kalman filter, fusing low frequency GNSS data with high frequency accelerations to predict position and velocity.
 
-
-Filter outputs generated on an RC aircraft, showing the smoothing of the filter:
+Filter output (green) and raw GNSS position (yellow). generated in flight on an RC aircraft:
 ![Filter outputs generated on an RC aircraft, showing the smoothing of the filter](https://github.com/EyalPorat/Navigation-Kalman/blob/main/Filter%20Test.jpeg)
 
-**Examples**
+**Examples:**
 
 To create a simple filter object:
 ```
@@ -27,3 +24,6 @@ position = mykalman.U_hat[0]
 velocity = mykalman.U_hat[1]
 ```
 
+(An object corresponds to a single axis)
+
+NOTE: The GNSS readings and accelerations should be in the same frame. For a normal implementation, the NED (north-east-down) frame, that is the default for the GNSS was used. The accelerations will most likely be in the inertial frame, and should be rotated to the NED frame using an IMU.
