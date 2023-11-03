@@ -7,19 +7,19 @@ Filter output (green) and raw GNSS position (yellow). generated in flight on an 
 **Examples:**
 
 To create a simple filter object:
-```
+```cpp
 navKalman mykalman = navKalman(R_position, R_velocity, a_std);
 ```
 Run prediction step with acceleration data:
-```
+```cpp
 mykalman.accel_update(Dt, accel);
 ```
 Run update step with GNSS position and velocity:
-```
+```cpp
 mykalman.GNSS_update(position, velocity);
 ```
 Access the predictions:
-```
+```cpp
 position = mykalman.U_hat[0]
 velocity = mykalman.U_hat[1]
 ```
