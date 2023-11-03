@@ -5,7 +5,9 @@ Filter output (green) and raw GNSS position (yellow). generated in flight on an 
 ![Filter outputs generated on an RC aircraft, showing the smoothing of the filter](FilterTest.png)
 
 **Examples:**
-
+```cpp
+#include "nav_kalman.h"
+```
 To create a simple filter object:
 ```cpp
 navKalman mykalman = navKalman(R_position, R_velocity, a_std);
