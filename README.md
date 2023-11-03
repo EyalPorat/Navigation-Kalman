@@ -2,7 +2,7 @@
 An implementation of an asynchronous navigation Kalman filter, fusing low frequency GNSS data with high frequency accelerations to predict position and velocity.
 
 Filter output (green) and raw GNSS position (yellow). generated in flight on an RC aircraft:
-![Filter outputs generated on an RC aircraft, showing the smoothing of the filter](https://github.com/EyalPorat/Navigation-Kalman/blob/main/Filter%20Test.jpeg)
+![Filter outputs generated on an RC aircraft, showing the smoothing of the filter](Filter%20Test.jpeg)
 
 **Examples:**
 
